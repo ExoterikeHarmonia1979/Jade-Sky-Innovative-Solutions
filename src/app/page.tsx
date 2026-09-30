@@ -8,6 +8,7 @@ import { ProcessStep } from '@/components/ProcessStep';
 import { LinkButton } from '@/components/Button';
 import { services } from '@/data/services';
 import { processSteps } from '@/data/process';
+import { buildProfessionalServiceSchema } from '@/lib/structuredData';
 
 export const metadata: Metadata = {
   title: 'Jade Sky Innovative Solutions | Azure, Microsoft 365 & AI Consulting',
@@ -16,8 +17,11 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const schema = buildProfessionalServiceSchema();
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <HeroSection />
 
       <Reveal>
