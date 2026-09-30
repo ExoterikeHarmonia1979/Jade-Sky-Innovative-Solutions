@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Sora, Inter } from 'next/font/google';
 import './globals.css';
+import { Header } from '@/components/Header';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -22,7 +23,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${sora.variable} ${inter.variable}`}>
-      <body className="bg-midnight font-body text-gray-200 antialiased">{children}</body>
+      <body className="bg-midnight font-body text-gray-200 antialiased">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
