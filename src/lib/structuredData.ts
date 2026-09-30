@@ -1,3 +1,5 @@
+import { SITE_URL } from './site';
+
 export interface ProfessionalServiceSchema {
   '@context': 'https://schema.org';
   '@type': 'ProfessionalService';
@@ -9,8 +11,6 @@ export interface ProfessionalServiceSchema {
   areaServed: string;
   description: string;
 }
-
-const SITE_URL = 'https://jadeskyinnovativesolutions.com';
 
 export function buildProfessionalServiceSchema(): ProfessionalServiceSchema {
   return {

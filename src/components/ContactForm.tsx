@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, type ChangeEvent, type FormEvent } from 'react';
-import { buttonStyles } from './Button';
+import { Button } from './Button';
 import { validateContactForm, type ContactFormData, type ContactFormErrors } from '@/lib/validateContactForm';
 
 const SERVICE_OPTIONS = [
@@ -36,6 +36,7 @@ export function ContactForm() {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setStatus('idle');
     const validationErrors = validateContactForm(formData);
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length > 0) return;
@@ -156,9 +157,9 @@ export function ContactForm() {
         )}
       </div>
 
-      <button type="submit" disabled={status === 'submitting'} className={buttonStyles('primary')}>
+      <Button type="submit" disabled={status === 'submitting'}>
         {status === 'submitting' ? 'Sending...' : 'Send message'}
-      </button>
+      </Button>
 
       {status === 'success' && (
         <p className="text-sm font-semibold text-jade">Thanks! I&apos;ll get back to you shortly.</p>

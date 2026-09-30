@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/site';
 
-const SITE_URL = 'https://jadeskyinnovativesolutions.com';
 const ROUTES = ['', '/services', '/about', '/contact'];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -3,6 +3,7 @@ import { Sora, Inter } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { SITE_URL } from '@/lib/site';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -16,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://jadeskyinnovativesolutions.com'),
+  metadataBase: new URL(SITE_URL),
   title: 'Jade Sky Innovative Solutions | Azure, Microsoft 365 & AI Consulting',
   description:
     'Jade Sky Innovative Solutions helps growing businesses adopt Azure, Microsoft 365, and custom AI solutions.',

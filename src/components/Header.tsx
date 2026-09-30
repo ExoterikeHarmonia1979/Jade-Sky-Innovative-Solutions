@@ -4,13 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { LinkButton } from './Button';
-
-const NAV_LINKS = [
-  { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
-];
+import { NAV_LINKS } from '@/lib/site';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +13,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-midnight-border bg-midnight/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link href="/" className="flex items-center gap-2">
-          <img src="/logo.svg" alt="Jade Sky Innovative Solutions" className="h-8 w-8" />
+          <img src="/logo.svg" alt="Jade Sky Innovative Solutions" width={32} height={32} className="h-8 w-8" />
           <span className="font-heading text-lg font-bold text-gray-200">JSIS</span>
         </Link>
 

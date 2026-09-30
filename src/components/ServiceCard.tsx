@@ -17,7 +17,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
   return (
     <div
       id={service.slug}
-      className="h-full rounded-lg border border-midnight-border bg-gradient-to-b from-[#0f1b33] to-midnight p-6"
+      className="h-full scroll-mt-24 rounded-lg border border-midnight-border bg-gradient-to-b from-[#0f1b33] to-midnight p-6"
     >
       <Icon className="h-8 w-8 text-jade" />
       <h3 className="mt-4 font-heading text-xl font-bold text-gray-100">{service.title}</h3>
