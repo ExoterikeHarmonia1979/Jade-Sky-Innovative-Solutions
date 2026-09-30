@@ -1,8 +1,8 @@
-import { Cloud, LayoutGrid, Sparkles, type LucideIcon } from 'lucide-react';
+import { CloudCog, LayoutGrid, Sparkles, type LucideIcon } from 'lucide-react';
 import type { Service } from '@/lib/types';
 
 const ICONS: Record<Service['slug'], LucideIcon> = {
-  azure: Cloud,
+  azure: CloudCog,
   m365: LayoutGrid,
   ai: Sparkles,
 };
