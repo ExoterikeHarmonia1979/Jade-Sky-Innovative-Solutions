@@ -11,10 +11,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-midnight-border bg-midnight/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link href="/" className="flex items-center gap-2">
-          <img src="/logo.svg" alt="Jade Sky Innovative Solutions" width={32} height={32} className="h-8 w-8" />
-          <span className="font-heading text-lg font-bold text-gray-200">JSIS</span>
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-1">
+        <Link href="/" className="flex items-center">
+          <img src="/logo.svg" alt="Jade Sky Innovative Solutions" width={130} height={130} className="h-[130px] w-[130px]" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
