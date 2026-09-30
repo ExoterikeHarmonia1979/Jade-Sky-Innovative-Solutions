@@ -4,6 +4,7 @@ export interface Service {
   slug: ServicePillar;
   title: string;
   summary: string;
+  detail: string;
   bullets: string[];
 }
 

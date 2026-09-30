@@ -16,9 +16,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jadeskyinnovativesolutions.com'),
   title: 'Jade Sky Innovative Solutions | Azure, Microsoft 365 & AI Consulting',
   description:
     'Jade Sky Innovative Solutions helps growing businesses adopt Azure, Microsoft 365, and custom AI solutions.',
+  openGraph: {
+    title: 'Jade Sky Innovative Solutions | Azure, Microsoft 365 & AI Consulting',
+    description:
+      'Jade Sky Innovative Solutions helps growing businesses adopt Azure, Microsoft 365, and custom AI solutions.',
+    url: '/',
+    siteName: 'Jade Sky Innovative Solutions',
+    images: ['/logo.svg'],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

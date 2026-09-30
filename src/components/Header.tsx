@@ -61,7 +61,9 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <LinkButton href="/contact">Get in touch</LinkButton>
+          <LinkButton href="/contact" onClick={() => setIsMenuOpen(false)}>
+            Get in touch
+          </LinkButton>
         </nav>
       )}
     </header>

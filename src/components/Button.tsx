@@ -31,11 +31,12 @@ interface LinkButtonProps {
   variant?: ButtonVariant;
   className?: string;
   children: ReactNode;
+  onClick?: () => void;
 }
 
-export function LinkButton({ href, variant = 'primary', className = '', children }: LinkButtonProps) {
+export function LinkButton({ href, variant = 'primary', className = '', children, onClick }: LinkButtonProps) {
   return (
-    <Link href={href} className={`${buttonStyles(variant)} ${className}`}>
+    <Link href={href} className={`${buttonStyles(variant)} ${className}`} onClick={onClick}>
       {children}
     </Link>
   );

@@ -12,13 +12,17 @@ export default function ServicesPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-20">
       <SectionHeading
+        as="h1"
         eyebrow="Services"
         title="Azure, Microsoft 365, and AI solution development"
         subtitle="Three specialties, one point of contact."
       />
-      <div className="mt-14 grid gap-8 md:grid-cols-3">
+      <div className="mt-14 space-y-14">
         {services.map((service) => (
-          <ServiceCard key={service.slug} service={service} />
+          <div key={service.slug}>
+            <ServiceCard service={service} />
+            <p className="mt-4 text-gray-300">{service.detail}</p>
+          </div>
         ))}
       </div>
     </main>

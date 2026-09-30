@@ -67,9 +67,15 @@ export function ContactForm() {
           id="name"
           value={formData.name}
           onChange={handleChange('name')}
+          aria-invalid={!!errors.name}
+          aria-describedby={errors.name ? 'name-error' : undefined}
           className="mt-1 w-full rounded border border-midnight-border bg-[#0f1b33] px-3 py-2 text-gray-200 focus:border-jade focus:outline-none"
         />
-        {errors.name && <p className="mt-1 text-sm text-red-400">{errors.name}</p>}
+        {errors.name && (
+          <p id="name-error" role="alert" className="mt-1 text-sm text-red-400">
+            {errors.name}
+          </p>
+        )}
       </div>
 
       <div>
@@ -81,9 +87,15 @@ export function ContactForm() {
           type="email"
           value={formData.email}
           onChange={handleChange('email')}
+          aria-invalid={!!errors.email}
+          aria-describedby={errors.email ? 'email-error' : undefined}
           className="mt-1 w-full rounded border border-midnight-border bg-[#0f1b33] px-3 py-2 text-gray-200 focus:border-jade focus:outline-none"
         />
-        {errors.email && <p className="mt-1 text-sm text-red-400">{errors.email}</p>}
+        {errors.email && (
+          <p id="email-error" role="alert" className="mt-1 text-sm text-red-400">
+            {errors.email}
+          </p>
+        )}
       </div>
 
       <div>
@@ -106,6 +118,8 @@ export function ContactForm() {
           id="serviceInterest"
           value={formData.serviceInterest}
           onChange={handleChange('serviceInterest')}
+          aria-invalid={!!errors.serviceInterest}
+          aria-describedby={errors.serviceInterest ? 'serviceInterest-error' : undefined}
           className="mt-1 w-full rounded border border-midnight-border bg-[#0f1b33] px-3 py-2 text-gray-200 focus:border-jade focus:outline-none"
         >
           <option value="">Select one</option>
@@ -115,7 +129,11 @@ export function ContactForm() {
             </option>
           ))}
         </select>
-        {errors.serviceInterest && <p className="mt-1 text-sm text-red-400">{errors.serviceInterest}</p>}
+        {errors.serviceInterest && (
+          <p id="serviceInterest-error" role="alert" className="mt-1 text-sm text-red-400">
+            {errors.serviceInterest}
+          </p>
+        )}
       </div>
 
       <div>
@@ -127,9 +145,15 @@ export function ContactForm() {
           rows={4}
           value={formData.message}
           onChange={handleChange('message')}
+          aria-invalid={!!errors.message}
+          aria-describedby={errors.message ? 'message-error' : undefined}
           className="mt-1 w-full rounded border border-midnight-border bg-[#0f1b33] px-3 py-2 text-gray-200 focus:border-jade focus:outline-none"
         />
-        {errors.message && <p className="mt-1 text-sm text-red-400">{errors.message}</p>}
+        {errors.message && (
+          <p id="message-error" role="alert" className="mt-1 text-sm text-red-400">
+            {errors.message}
+          </p>
+        )}
       </div>
 
       <button type="submit" disabled={status === 'submitting'} className={buttonStyles('primary')}>

@@ -29,6 +29,9 @@ npm run build
 Deploys to Vercel on the default Node runtime. Attach the `jadeskyinnovativesolutions.com` domain
 in the Vercel dashboard after the first deploy — that step is manual and outside this repo.
 
+In the Vercel project settings, set **Root Directory** to `Projects/JSIS Website` — this repo's
+root has an unrelated `package.json`, so auto-detection won't find the Next.js app without it.
+
 ## Tests
 
 ```bash
