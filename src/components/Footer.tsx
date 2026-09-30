@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12">
         <div className="flex flex-col gap-8 md:flex-row md:justify-between">
           <div className="flex items-center gap-2">
-            <img src="/logo.svg" alt="Jade Sky Innovative Solutions" width={130} height={130} className="h-[130px] w-[130px]" />
+            <img src="/logo.svg" alt="Jade Sky Innovative Solutions" width={32} height={32} className="h-8 w-8" />
             <div>
               <p className="font-heading text-sm font-bold text-gray-200">Jade Sky Innovative Solutions LLC</p>
               <p className="text-xs text-gray-500">jadeskyinnovativesolutions.com</p>
