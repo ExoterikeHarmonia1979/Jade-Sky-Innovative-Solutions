@@ -27,9 +27,14 @@ export const metadata: Metadata = {
       'Jade Sky Innovative Solutions helps growing businesses adopt Azure, Microsoft 365, and custom AI solutions.',
     url: '/',
     siteName: 'Jade Sky Innovative Solutions',
-    images: ['/logo.svg'],
     locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jade Sky Innovative Solutions | Azure, Microsoft 365 & AI Consulting',
+    description:
+      'Jade Sky Innovative Solutions helps growing businesses adopt Azure, Microsoft 365, and custom AI solutions.',
   },
 };
 
